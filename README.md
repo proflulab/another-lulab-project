@@ -1,6 +1,7 @@
 # another-lulab-project
 yay
 
+KEEP IN MIND THAT THE CODE HAS NOT BEEN UPDATED TO SCALE CORRECTLY AND YOU WILL NOT BE ABLE TO OPEN IT ON YOUR PHONE/TABLET PROPERY.
 
 there is a HV inside of Content including stuff like HV1 HV2 and more. its over 25mb so i didnt upload it.
 just know that this is the current file format
@@ -50,6 +51,7 @@ Content (folder)
 js (folder)
 
     script.js
+    orientation.js
 
 
 styles (folder)
