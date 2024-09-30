@@ -20,7 +20,7 @@ Content (folder)
 
               team-members (subfolder)
 
-                      founder.jpg
+                      founder.png
                       a.jpg
                       b.jpg
                       c.jpg
@@ -34,10 +34,11 @@ Content (folder)
                       suno-placeholder.jpg
 
 
-              favicon.png
-              og-image.jpg
-              twitter-image.jpg
 
+              favicon.png
+              goal.png
+              vision.png
+              vision.png
 
     videos (folder)
             smt. idk
