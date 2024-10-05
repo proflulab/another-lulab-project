@@ -1,4 +1,4 @@
-// JavaScript to handle the hero background carousel, language toggle, etc.
+// JavaScript to handle the hero background carousel, language toggle, and screen scaling
 document.addEventListener('DOMContentLoaded', function() {
     // Hero Background Carousel Functionality
     let heroIndex = 0;
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             video.muted = true;
             video.style.width = '100%';
             video.style.height = '100%';
+            video.style.objectFit = 'cover';
             video.addEventListener('ended', nextHeroItem);
             heroBackground.appendChild(video);
         }
@@ -47,4 +48,47 @@ document.addEventListener('DOMContentLoaded', function() {
             if (video) video.muted = !video.muted;
         }
     });
+
+    // Language Toggle Functionality
+    const languageToggle = document.getElementById('languageToggle');
+    const elementsToTranslate = document.querySelectorAll('[data-en], [data-zh]');
+
+    languageToggle.addEventListener('click', function() {
+        const currentLang = languageToggle.getAttribute('data-current-lang') || 'en';
+        const newLang = currentLang === 'en' ? 'zh' : 'en';
+
+        elementsToTranslate.forEach(el => {
+            el.classList.add('lang-fade');
+            setTimeout(() => {
+                el.textContent = el.getAttribute(`data-${newLang}`);
+                el.classList.remove('lang-fade');
+            }, 300);
+        });
+
+        languageToggle.setAttribute('data-current-lang', newLang);
+        languageToggle.textContent = newLang === 'en' ? 'English' : '简体中文';
+    });
+
+    // Screen Scaling Functionality
+    function adjustFontSize() {
+        const width = window.innerWidth;
+        const baseFontSize = 16;
+        let scaleFactor;
+
+        if (width < 480) {
+            scaleFactor = 0.8;
+        } else if (width < 768) {
+            scaleFactor = 0.9;
+        } else if (width < 1024) {
+            scaleFactor = 1;
+        } else {
+            scaleFactor = 1.1;
+        }
+
+        document.documentElement.style.fontSize = `${baseFontSize * scaleFactor}px`;
+    }
+
+    // Initial call and event listener for resize
+    adjustFontSize();
+    window.addEventListener('resize', adjustFontSize);
 });
