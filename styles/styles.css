@@ -1,11 +1,8 @@
-/* styles/styles.css */
-
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Variables */
 :root {
-    /* Lines 8 to 28: Your existing CSS variables */
     --primary-blue: #0066cc;
     --secondary-blue: #4da6ff;
     --light-blue: #b3d9ff;
@@ -338,31 +335,28 @@ nav a:hover::after {
     margin-top: 3rem;
 }
 
-.about-item img {
-    width: 140px; /* Adjust the size as needed */
-    height: 140px; /* Ensure the height matches the width to keep it circular */
-    border-radius: 50%; /* This creates the circular shape */
-    display: block;
-    margin: 0 auto 1rem auto; /* Center the image and add spacing below */
-    object-fit: cover; /* Ensures the image fits inside the circular frame */
+.about-item {
+    background-color: var(--gray-100);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-
+.about-item img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem auto;
+    object-fit: cover;
+}
 
 .about-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
-
-.about-item {
-    background-color: var(--gray-100); /* Light background color */
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Slight shadow for depth */
-    transition: all 0.3s ease;
-    text-align: center; /* Ensures the text and image are centered */
-}
-
 
 /* Philosophy Section Styles */
 .philosophy-grid {
@@ -398,7 +392,7 @@ nav a:hover::after {
 /* Technologies Section Styles */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -691,6 +685,7 @@ nav a:hover::after {
     }
 }
 
+/* Language Transition Effect */
 [data-en], [data-zh] {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
