@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         languageToggle.setAttribute('data-current-lang', newLang);
-        languageToggle.textContent = newLang === 'en' ? 'English' : '简体中文';
+        languageToggle.textContent = newLang === 'en' ? '简体中文' : 'English';
     });
 
     // Screen Scaling Functionality
