@@ -14,7 +14,7 @@ Content (folder)
               HV4.jpg
 
 
-    images (folder)
+    Images (folder)
 
               team-members (subfolder)
 
@@ -38,7 +38,7 @@ Content (folder)
               vision.png
               vision.png
 
-    videos (folder)
+    Videos (folder)
             smt. idk
 
 
