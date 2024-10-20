@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+
+    <!-- Meta Tags and Links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Lulab" data-zh="陆向谦实验室">陆向谦实验室</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="Content/Images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join Lulab to learn Roblox development, AI, and cutting-edge technologies">
+    <meta name="keywords" content="coding, programming, Roblox, AI, machine learning, tech education">
+    <meta name="author" content="Lulab">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Lulab.club/">
+    <meta property="og:title" content="Lulab">
+    <meta property="og:description" content="Learn coding, Roblox development, and AI with Lulab">
+    <meta property="og:image" content="Content/Images/og-image.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://Lulab.club/">
+    <meta property="twitter:title" content="Lulab">
+    <meta property="twitter:description" content="Learn coding, Roblox development, and AI with Lulab">
+    <meta property="twitter:image" content="Images/twitter-image.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="Content/Images/favicon.png" alt="Logo" class="logo-icon">
+                <span data-en="Lulab" data-zh="陆向谦实验室">陆向谦实验室</span>
+            </a>
+            <nav class="main-nav">
+                <a href="#home" data-en="Home" data-zh="首页">首页</a>
+                <div class="dropdown">
+                    <a href="#about" data-en="About" data-zh="关于我们">关于我们</a>
+                    <div class="dropdown-content">
+                        <a href="#about" data-en="Mission,Vision,Goal" data-zh="使命、愿景、培养目标">使命、愿景、培养目标</a>
+                        <a href="#Philosophy" data-en="Educational Philosophy" data-zh="教育理念">教育理念</a>
+                    </div>
+                </div>
+                <a href="#team" data-en="Our Team" data-zh="我们的团队">我们的团队</a>
+                <div class="dropdown">
+                    <a href="#ai-club" data-en="AI training camp" data-zh="AI训练营">AI训练营</a>
+                    <div class="dropdown-content">
+                        <a href="https://another-lulab-project-introduction.vercel.app/" data-en="Introduction" data-zh="训练营介绍">训练营介绍</a>
+                        <a href="https://another-lulab-project-schedule.vercel.app/" data-en="Schedule" data-zh="日程安排">日程安排</a>
+                        <a href="#technologies" data-en="Related technologies" data-zh="相关技术">相关技术</a>
+                        <a href="#Achievements" data-en="Achievements" data-zh="成果展示">成果展示</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#clubs" data-en="Clubs" data-zh="俱乐部">俱乐部</a>
+                    <div class="dropdown-content">
+                        <a href="https://another-lulab-project-ai-basic.vercel.app/" data-en="AI Basics Club" data-zh="AI 基础俱乐部">AI 基础俱乐部</a>
+                        <a href="#coding-club" data-en="AI Advanced Club" data-zh="AI 工业级俱乐部">AI 工业级俱乐部</a>
+                        <a href="#roblox-club" data-en="English Edification Metaverse Club" data-zh="英文熏陶元宇宙俱乐部">英文熏陶元宇宙俱乐部</a>
+                        <a href="#roblox-club" data-en="Lua Basic Programming & Metaverse Club" data-zh="Lua基础编程&元宇宙俱乐部">Lua基础编程&元宇宙俱乐部</a>
+                        <a href="#roblox-club" data-en="Digital Marketing Club" data-zh="数字营销俱乐部">数字营销俱乐部</a>
+                        <a href="#roblox-club" data-en="Leadership Club" data-zh="领导力俱乐部">领导力俱乐部</a>
+                    </div>
+                </div>
+                <a href="#contact" data-en="Contact Us" data-zh="联系我们">联系我们</a>
+            </nav>
+            <button id="languageToggle" data-en="中文" data-zh="English">English</button>
+        </div>
+    </header>
+
+    <!-- Minor Banner (Dropdown Style) -->
+    <div class="minor-banner">
+        <div class="minor-banner-content">
+            <a href="#ai-training" data-en="AI Training" data-zh="AI训练">AI训练</a>
+            <a href="#ai-projects" data-en="AI Projects" data-zh="AI项目">AI项目</a>
+            <a href="#roblox-club" data-en="Roblox Club" data-zh="Roblox俱乐部">Roblox俱乐部</a>
+            <a href="#coding-club" data-en="Coding Club" data-zh="编程俱乐部">编程俱乐部</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="wave-top">
+                <!-- SVG content -->
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28C228.36,68.92,294.33,40.98,364.8,36.79C438.64,32.43,512.34,53.67,583,72.05C652.27,90.05,721.3,96.93,792.4,85.13C828.55,79.13,862.25,67.29,896.85,55.79C989.49,25,1113,-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05C99.41,111.27,165,111,224.58,91.58C255.73,81.43,284.67,65.51,314.25,51.78C355.17,32.78,398.98,5.78,445.08,2.11C481.34,-0.74,515.98,11.53,543.68,33.67C575.45,59.06,606,95.67,647.31,106.67C687.75,117.46,728.66,100,766.44,82.41C802.6,65.91,838.3,43.75,879.07,39.7C938.8,33.85,992.35,62.58,1047.97,78.54C1078.17,87.2,1107,84.71,1135.09,70.04C1157.52,59.15,1183.09,43.11,1195.74,20.8V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57C518.83,34.93,560.06,22.45,603.44,16.11C662.44,7.48,715.92,28.35,769,51.51C820.37,77.22,878.44,95.24,943.64,90C1030.17,83,1116.1,44.29,1192.44,5.19V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <!-- Hero Background Carousel -->
+            <div class="hero-background">
+                <!-- The carousel content will be injected by JavaScript -->
+            </div>
+
+            <div class="hero-content">
+                <h1 data-en="Welcome to Lulab" data-zh="欢迎来到陆向谦实验室">欢迎来到陆向谦实验室</h1>
+                <p data-en="Nurturing Natives in the Age of Artificial Intelligence" data-zh="培养AI时代的原住民">培养AI时代的原住民</p>
+                <a href="#courses" class="cta-button" data-en="Join Our Courses" data-zh="加入我们的课程">加入我们的课程</a>
+                <p class="video-instructions" data-en="Press the spacebar to unmute the video." data-zh="按空格键取消静音视频">按空格键取消静音视频</p>
+            </div>
+
+            <div class="wave-bottom">
+                <!-- SVG content -->
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28C228.36,68.92,294.33,40.98,364.8,36.79C438.64,32.43,512.34,53.67,583,72.05C652.27,90.05,721.3,96.93,792.4,85.13C828.55,79.13,862.25,67.29,896.85,55.79C989.49,25,1113,-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05C99.41,111.27,165,111,224.58,91.58C255.73,81.43,284.67,65.51,314.25,51.78C355.17,32.78,398.98,5.78,445.08,2.11C481.34,-0.74,515.98,11.53,543.68,33.67C575.45,59.06,606,95.67,647.31,106.67C687.75,117.46,728.66,100,766.44,82.41C802.6,65.91,838.3,43.75,879.07,39.7C938.8,33.85,992.35,62.58,1047.97,78.54C1078.17,87.2,1107,84.71,1135.09,70.04C1157.52,59.15,1183.09,43.11,1195.74,20.8V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57C518.83,34.93,560.06,22.45,603.44,16.11C662.44,7.48,715.92,28.35,769,51.51C820.37,77.22,878.44,95.24,943.64,90C1030.17,83,1116.1,44.29,1192.44,5.19V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="wave-section">
+            <div class="content">
+                <h2 class="section-title" data-en="About" data-zh="关于我们">关于我们</h2>
+                <div class="section-content">
+                    <div class="about-grid">
+                        <div class="about-item">
+                            <img src="Content/Images/mission.png" alt="mission">
+                            <h4 data-en="Our Mission" data-zh="使命">使命</h4>
+                            <p data-en="Help students of Lu Xiangqian's laboratory realize their dreams" data-zh="帮助陆向谦实验室的同学们实现梦想">帮助陆向谦实验室的同学们实现梦想</p>
+                        </div>
+                        <div class="about-item">
+                            <img src="Content/Images/vision.png" alt="vision">
+                            <h4 data-en="Our Vision" data-zh="愿景">愿景</h4>
+                            <p data-en="Become an online Stanford University. Bring Stanford to every household" data-zh="做成网上斯坦福大学，把斯坦福送到寻常百姓家">做成网上斯坦福大学，把斯坦福送到寻常百姓家</p>
+                        </div>
+                        <div class="about-item">
+                            <img src="Content/Images/goal.png" alt="goal">
+                            <h4 data-en="Our Goal" data-zh="培养目标">培养目标</h4>
+                            <p data-en="Cultivate students to become super individuals in the AI era" data-zh="培养同学们成为AI时代的超级个体">培养同学们成为AI时代的超级个体</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-container">
+                <!-- SVG content -->
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28C228.36,68.92,294.33,40.98,364.8,36.79C438.64,32.43,512.34,53.67,583,72.05C652.27,90.05,721.3,96.93,792.4,85.13C828.55,79.13,862.25,67.29,896.85,55.79C989.49,25,1113,-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05C99.41,111.27,165,111,224.58,91.58C255.73,81.43,284.67,65.51,314.25,51.78C355.17,32.78,398.98,5.78,445.08,2.11C481.34,-0.74,515.98,11.53,543.68,33.67C575.45,59.06,606,95.67,647.31,106.67C687.75,117.46,728.66,100,766.44,82.41C802.6,65.91,838.3,43.75,879.07,39.7C938.8,33.85,992.35,62.58,1047.97,78.54C1078.17,87.2,1107,84.71,1135.09,70.04C1157.52,59.15,1183.09,43.11,1195.74,20.8V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57C518.83,34.93,560.06,22.45,603.44,16.11C662.44,7.48,715.92,28.35,769,51.51C820.37,77.22,878.44,95.24,943.64,90C1030.17,83,1116.1,44.29,1192.44,5.19V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Educational Philosophy Section -->
+        <section id="Philosophy" class="wave-section">
+            <div class="content">
+                <h2 class="section-title" data-en="Educational Philosophy" data-zh="教育理念">教育理念</h2>
+                <div class="section-content">
+                    <div class="philosophy-grid">
+                        <!-- Grid content can go here -->
+                    </div>
+                    <div class="philosophy-item">
+                        <h4 data-en="" data-zh="" class=""></h4>
+                        <p data-en="In 1994, believing that the Internet would disrupt the world, Professor Luk founded the Luk Xiangqian Lab to put his educational approach into practice: Unconventional self-actualization - It is better to learn theories than to learn cases, it is better to learn cases than to do cases, and it is better to play cases than to do cases; one person is not as good as a few people to play, and a few people are not as good as gathering the world's talented teachers to play in a group! Take the children to practice English, computer, artificial intelligence children's skills." data-zh="1994年，陆教授坚信互联网会颠覆全世界，因此创办了陆向谦实验室以实践他的教育方法：非常规自我实现——学理论不如学案例，学案例不如做案例，做案例不如玩案例；一人玩不如几人玩，几人玩不如聚天下英才名师组团玩！带着孩子们练英语，计算机，人工智能的童子功。">1994年，陆教授坚信互联网会颠覆全世界，因此创办了陆向谦实验室以实践他的教育方法：非常规自我实现——学理论不如学案例，学案例不如做案例，做案例不如玩案例；一人玩不如几人玩，几人玩不如聚天下英才名师组团玩！带着孩子们练英语，计算机，人工智能的童子功。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-container">
+                <!-- SVG content -->
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="wave-section">
+            <div class="content">
+                <h2 class="section-title" data-en="Our Team" data-zh="我们的团队">我们的团队</h2>
+                <div class="section-content">
+                    <div class="subsection">
+                        <h4 data-en="Founder" data-zh="创始人">创始人</h4>
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <img src="Content/Images/team-members/founder.png" alt="Lu Xiangqian">
+                                <h4 data-en="Lu XiangQian" data-zh="陆向谦">陆向谦</h4>
+                                <p data-en="Founder & CEO" data-zh="创始人兼首席执行官">创始人兼首席执行官</p>
+                                <p data-en="Professor of Tsinghua University, Ph.D., Hass School of Business, University of California, Berkeley, United States. Professor Lu has two children and joined Luk's lab in junior high school. Daughter: Stanford University, part-time Pinterest early employee during his studies, and now a senior executive of a famous Silicon Valley company. Son: Joined Uber at the age of 19 and studied at the University of California, Berkeley, and is now a senior engineer at Google." data-zh="清华大学教授，美国加州伯克利大学Hass商学院博士。陆教授有两个孩子，初中加入陆向谦实验室。女儿：斯坦福大学，学业期间兼职Pinterest早期雇员，现为硅谷名企高管。儿子：19岁加入Uber并同时就读于加州大学伯克利分校，现为谷歌高级工程师。">清华大学教授，美国加州伯克利大学Hass商学院博士。陆教授有两个孩子，初中加入陆向谦实验室。女儿：斯坦福大学，学业期间兼职Pinterest早期雇员，现为硅谷名企高管。儿子：19岁加入Uber并同时就读于加州大学伯克利分校，现为谷歌高级工程师。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h4 data-en="Instructors" data-zh="讲师">讲师</h4>
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <img src="Content/Images/team-members/a.jpg" alt="Teacher A">
+                                <h4 data-en="Yang ShiMing" data-zh="杨仕明">杨仕明</h4>
+                                <p data-en="Lua, industrial-grade project leader" data-zh="元宇宙、工业级项目负责人">元宇宙、工业级项目负责人</p>
+                                <p data-en="Roblocks Development Instructor Lua Programming/Gaming/Web Design Expert" data-zh="Roblox 开发讲师 Lua 编程/游戏/网站设计专家">Roblox 开发讲师 Lua 编程/游戏/网站设计专家</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="Content/Images/team-members/b.jpg" alt="Teacher B">
+                                <h4 data-en="Zhang Chen" data-zh="张晨">张晨</h4>
+                                <p data-en="AI Bootcamp Leader" data-zh="AI 训练营负责人">AI 训练营负责人</p>
+                                <p data-en="Take you to play with AI software at home and abroad" data-zh="AI大赛组织者、讲师">AI大赛组织者、讲师</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="Content/Images/team-members/c.jpg" alt="Teacher C">
+                                <h4 data-en="Lv SiTong" data-zh="吕思彤">吕思彤</h4>
+                                <p data-en="Creative AI Programming Instructor" data-zh="创意AI编程讲师">创意AI编程讲师</p>
+                                <p data-en="Outstanding student representative of the lab" data-zh="实验室优秀学员代表">实验室优秀学员代表</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-container">
+                <!-- SVG content -->
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28C228.36,68.92,294.33,40.98,364.8,36.79C438.64,32.43,512.34,53.67,583,72.05C652.27,90.05,721.3,96.93,792.4,85.13C828.55,79.13,862.25,67.29,896.85,55.79C989.49,25,1113,-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05C99.41,111.27,165,111,224.58,91.58C255.73,81.43,284.67,65.51,314.25,51.78C355.17,32.78,398.98,5.78,445.08,2.11C481.34,-0.74,515.98,11.53,543.68,33.67C575.45,59.06,606,95.67,647.31,106.67C687.75,117.46,728.66,100,766.44,82.41C802.6,65.91,838.3,43.75,879.07,39.7C938.8,33.85,992.35,62.58,1047.97,78.54C1078.17,87.2,1107,84.71,1135.09,70.04C1157.52,59.15,1183.09,43.11,1195.74,20.8V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57C518.83,34.93,560.06,22.45,603.44,16.11C662.44,7.48,715.92,28.35,769,51.51C820.37,77.22,878.44,95.24,943.64,90C1030.17,83,1116.1,44.29,1192.44,5.19V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="technologies" class="wave-section">
+            <div class="content">
+                <h2 class="section-title" data-en="Our Technologies" data-zh="相关技术">相关技术</h2>
+                <div class="section-content">
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <img src="Content/Images/tech-icons/roblox-placeholder.jpg" alt="Roblox">
+                            <h4 data-en="Roblox Development" data-zh="Roblox 开发">Roblox 开发</h4>
+                            <p data-en="Learn to create immersive games using Roblox Studio and Lua scripting." data-zh="学习使用 Roblox Studio 和 Lua 脚本创建沉浸式游戏。">学习使用 Roblox Studio 和 Lua 脚本创建沉浸式游戏。</p>
+                        </div>
+                        <div class="tech-card">
+                            <img src="Content/Images/tech-icons/ai-placeholder.jpg" alt="Artificial Intelligence">
+                            <h4 data-en="Artificial Intelligence" data-zh="人工智能">人工智能</h4>
+                            <p data-en="Dive into machine learning, neural networks, and AI algorithms." data-zh="深入学习机器学习、神经网络和 AI 算法。">深入学习机器学习、神经网络和 AI 算法。</p>
+                        </div>
+                        <div class="tech-card">
+                            <img src="Content/Images/tech-icons/coze-placeholder.jpg" alt="Coze AI">
+                            <h4 data-en="Coze AI Integration" data-zh="Coze AI 集成">Coze AI 集成</h4>
+                            <p data-en="Integrate advanced AI features into your projects using Coze AI." data-zh="使用 Coze AI 将高级 AI 功能集成到您的项目中。">使用 Coze AI 将高级 AI 功能集成到您的项目中。</p>
+                        </div>
+                        <div class="tech-card">
+                            <img src="Content/Images/tech-icons/suno-placeholder.jpg" alt="Suno AI">
+                            <h4 data-en="Suno AI Music" data-zh="Suno AI 音乐">Suno AI 音乐</h4>
+                            <p data-en="Create AI-generated music and soundscapes for your games and apps." data-zh="为您的游戏和应用程序创建 AI 生成的音乐和音景。">为您的游戏和应用程序创建 AI 生成的音乐和音景。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-container">
+                <!-- SVG content -->
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28C228.36,68.92,294.33,40.98,364.8,36.79C438.64,32.43,512.34,53.67,583,72.05C652.27,90.05,721.3,96.93,792.4,85.13C828.55,79.13,862.25,67.29,896.85,55.79C989.49,25,1113,-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05C99.41,111.27,165,111,224.58,91.58C255.73,81.43,284.67,65.51,314.25,51.78C355.17,32.78,398.98,5.78,445.08,2.11C481.34,-0.74,515.98,11.53,543.68,33.67C575.45,59.06,606,95.67,647.31,106.67C687.75,117.46,728.66,100,766.44,82.41C802.6,65.91,838.3,43.75,879.07,39.7C938.8,33.85,992.35,62.58,1047.97,78.54C1078.17,87.2,1107,84.71,1135.09,70.04C1157.52,59.15,1183.09,43.11,1195.74,20.8V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57C518.83,34.93,560.06,22.45,603.44,16.11C662.44,7.48,715.92,28.35,769,51.51C820.37,77.22,878.44,95.24,943.64,90C1030.17,83,1116.1,44.29,1192.44,5.19V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Honored Projects Section -->
+        <section id="Achievements" class="wave-section">
+            <div class="content">
+                <h2 class="section-title" data-en="Presentation of achievements" data-zh="成果展示">成果展示</h2>
+                <div class="section-content">
+                    <div class="project-grid">
+                        <!-- Project Card 1 -->
+                        <div class="project-card" data-modal-target="#project1-modal">
+                            <h4 data-en="🏆Frog Foreign Teacher" data-zh="🏆青蛙外教">🏆青蛙外教</h4>
+                            <p data-en="Lu Sitong: Frog Foreign Teachers - ByteDance Big Model Conference Opening Case Presentation" data-zh="吕思彤：青蛙外教——字节跳动大模型发布会开场案例展示">吕思彤：青蛙外教——字节跳动大模型发布会开场案例展示</p>
+                        </div>
+                        <!-- Project Card 2 -->
+                        <div class="project-card" data-modal-target="#project2-modal">
+                            <h4 data-en="🏆AI Paper Game Agent" data-zh="🏆AI纸片游戏">🏆AI纸片游戏</h4>
+                            <p data-en="Wang Hongcheng: The youngest winner of the 2024 AI hackathon jointly organized by NVIDIA and ByteDance." data-zh="王宏程：2024英伟达与字节跳动联合举办的AI黑客马拉松最年轻的获奖者">王宏程：2024英伟达与字节跳动联合举办的AI黑客马拉松最年轻的获奖者</p>
+                        </div>
+                        <!-- Project Card 3 -->
+                        <div class="project-card" data-modal-target="#project3-modal">
+                            <h4 data-en="🏆Using SUNO for AI music creation" data-zh="🏆SUNO音乐创作">🏆SUNO音乐创作</h4>
+                            <p data-en="Wang Yujun: 2024 NetEase and China Science and Technology Museum jointly organized AI concerts in the top ten" data-zh="王禹钧：2024网易与中国科技馆联合举办的AI音乐会入围前十名">王禹钧：2024网易与中国科技馆联合举办的AI音乐会入围前十名</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals for Honored Projects -->
+        <!-- Modal 1 -->
+        <div class="modal" id="project1-modal" tabindex="-1">
+            <div class="modal-content">
+                <span class="close-button" data-close-button>&times;</span>
+                <h2 id="modal1-title" data-en="AIbot agent development based on the coze platform" data-zh="基于coze平台的AIbot智能体开发">基于coze平台的AIbot智能体开发</h2>
+                <p id="modal1-description" data-en="The project involves the development of an educational agent on the coze platform, using AI algorithms to produce personalized English foreign teachers, and completing English edification through the agent. > project involves the development of an educational agent on the coze platform, using AI algorithms to produce personalized English foreign teachers, and completing English edification through the agent." data-zh="该项目涉及在coze平台上开发一个教育智能体，利用AI算法制作出个性化的英语外教，通过智能体完成英语熏陶。">该项目涉及在coze平台上开发一个教育智能体，利用AI算法制作出个性化的英语外教，通过智能体完成英语熏陶。</p>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Embed Video Example</title>
+                    </head>
+                    <body>
+                    
+                    <!-- Parent container for the entire content -->
+                    <div id="main-container">
+                        
+                    <!-- Sub-container for media content -->
+                    <div id="media-section">
+                            
+                        <!-- Sub-container specifically for the video -->
+                        <div id="video-wrapper">
+                        <video controls width="500" height="220">
+                            <source src="Content/Videos/V1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                        
+                    </div>
+                    
+                    </div>
+                    
+                    </body>
+                    </html>
+                <img id="modal1-image" src="/Content/Images/tech-icons/roblox-placeholder.jpg" alt="Roblox Project" style="display:none;">
+                 
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div class="modal" id="project2-modal" tabindex="-1">
+            <div class="modal-content">
+                <span class="close-button" data-close-button>&times;</span>
+                <h2 id="modal2-title" data-en="Coze AI Chatbot Assistant" data-zh="基于coze平台的AIbot智能体开发">基于coze平台的AIbot智能体开发</h2>
+                <p id="modal2-description" data-en="Give full play to children's creativity and imagination, and use the COZE platform to create card games, which increases the fun of programming." data-zh="充分发挥孩子们的创造力和想象力，运用coze平台创作卡片游戏，增加了编程的趣味性。">充分发挥孩子们的创造力和想象力，运用coze平台创作卡片游戏，增加了编程的趣味性。</p>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Embed Video Example</title>
+                </head>
+                <body>
+                
+                <!-- Parent container for the entire content -->
+                <div id="main-container">
+                    
+                <!-- Sub-container for media content -->
+                <div id="media-section">
+                        
+                    <!-- Sub-container specifically for the video -->
+                    <div id="video-wrapper">
+                    <video controls width="500" height="220">
+                        <source src="Content/Videos/V2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    </div>
+                    
+                </div>
+                
+                </div>
+                
+                </body>
+                </html>
+                <img id="modal2-image" src="/Content/Images/tech-icons/coze-placeholder.jpg" alt="Coze Project" style="display:none;">
+ 
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div class="modal" id="project3-modal" tabindex="-1">
+            <div class="modal-content">
+                <span class="close-button" data-close-button>&times;</span>
+                <h2 id="modal3-title" data-en="Suno AI Music Composition" data-zh="Suno AI音乐创作">Suno AI音乐创作</h2>
+                <p id="modal3-description" data-en="Use Suno software to generate original music, including AI lyrics, arrangement, and singing." data-zh="运用Suno软件生成原创音乐，包括AI写词，编曲和演唱。">运用Suno软件生成原创音乐，包括AI写词，编曲和演唱。</p>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Embed Video Example</title>
+                </head>
+                <body>
+                
+                <!-- Parent container for the entire content -->
+                <div id="main-container">
+                    
+                <!-- Sub-container for media content -->
+                <div id="media-section">
+                        
+                    <!-- Sub-container specifically for the video -->
+                    <div id="video-wrapper">
+                    <video controls width="500" height="220">
+                        <source src="Content/Videos/V3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    </div>
+                    
+                </div>
+                
+                </div>
+                
+                </body>
+                </html>
+                <img id="modal3-image" src="/Content/Images/tech-icons/suno-placeholder.jpg" alt="Suno Project" style="display:none;">
+                 
+            </div>
+        </div>
+
+        <!-- Clubs Within Organization Section -->
+        <section id="clubs" class="wave-section">
+            <div class="content">
+                <h2 class="section-title" data-en="Clubs" data-zh="俱乐部">俱乐部</h2>
+                <div class="section-content">
+                    <div class="clubs-grid">
+                        <div class="club-card">
+                            <h4 data-en="AI Basics Club" data-zh="AI 基础俱乐部">AI 基础俱乐部</h4>
+                            <p data-en="Using the newest AI development platforms to let kids make whatever they desire" data-zh="使用新一代的AIbot开发平台，让孩子们开发自己感兴趣的AI原生应用程序。">使用新一代的AIbot开发平台，让孩子们开发自己感兴趣的AI原生应用程序。</p>
+                        </div>
+                        <div class="club-card">
+                            <h4 data-en="AI Advanced Club" data-zh="AI 工业级俱乐部">AI 工业级俱乐部</h4>
+                            <p data-en="Explore the infinite possibilities of AI technology through real-world project experience." data-zh="通过实际项目体验，探索AI技术的无限可能性。">通过实际项目体验，探索AI技术的无限可能性。</p>
+                        </div>
+                        <div class="club-card">
+                            <h4 data-en="English Edification Metaverse Club" data-zh="英文熏陶元宇宙俱乐部">英文熏陶元宇宙俱乐部</h4>
+                            <p data-en="Immerse yourself in English through games, basic game development and programming." data-zh="跟海外同学一起游戏熏陶英语，基础游戏开发与编程。">通过游戏熏陶英语，基础游戏开发与编程。</p>
+                        </div>
+                        <div class="club-card">
+                            <h4 data-en="Lua Basic Programming & Metaverse Club" data-zh="Lua基础编程&元宇宙俱乐部">Lua基础编程&元宇宙俱乐部</h4>
+                            <p data-en="Roblocks Basic Programming Teaching Instruction, Game Design." data-zh="Roblox基础编程教学指导，游戏设计。">Roblox基础编程教学指导，游戏设计。</p>
+                        </div>
+                        <div class="club-card">
+                            <h4 data-en="Digital Marketing Club" data-zh="数字营销俱乐部">数字营销俱乐部</h4>
+                            <p data-en="Practical exercises for marketing courses." data-zh="营销课程实战演练。">营销课程实战演练。</p>
+                        </div>
+                        <div class="club-card">
+                            <h4 data-en="Leadership Club" data-zh="领导力俱乐部">领导力俱乐部</h4>
+                            <p data-en="Cultivate future super individuals, and cultivate children's ability to organize, coordinate, and manage as a whole." data-zh="培养未来的超级个体，培养孩子组织协调统筹管理能力。">培养未来的超级个体，培养孩子组织协调统筹管理能力。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-container">
+                <!-- SVG content -->
+            </div>
+        </section>
+
+        
+        <!-- Courses Section -->
+        <section id="courses" class="wave-section">
+            <div class="content">
+                <h2 class="section-title" data-en="Join Our Courses" data-zh="加入我们">加入我们</h2>
+                <div class="section-content">
+                    <div class="course-options">
+                        <div class="course-option">
+                            <h4 data-en="Monthly Subscription" data-zh="月卡会员：AI训练营">月卡会员：AI训练营</h4>
+                            <ul>
+                                <li data-en="The AI training camp is held every two months, starting from the first Friday of the month and lasting for four weeks: the first three days of intensive training time: 20:30-21:30 every night; After the training camp, every Monday to Thursday at 20:30 in the evening, Saturday at 8:30 in the morning, there will be a 1-hour online live lecture Q&A." data-zh="AI人工智能训练营每两月一期，从月初第一个周五开始，为期四周：前三天集训：每晚20：30-21：30；集训完每周一至周四晚20：30，周六日上午8：30，1小时线上直播授课答疑。">AI人工智能训练营每两月一期，从月初第一个周五开始，为期四周：前三天集训：每晚20：30-21：30；集训完每周一至周四晚20：30，周六日上午8：30，1小时线上直播授课答疑。</li>
+                            </ul>
+                            <a href="https://buy.stripe.com/8wMeWieDU41Td5S9AF" class="cta-button" data-en="Subscribe Monthly" data-zh="月卡会员：AI训练营">月卡会员：AI训练营</a>
+                        </div>
+                        <div class="course-option">
+                            <h4 data-en="Yearly Subscription" data-zh="年卡会员">年卡会员</h4>
+                            <ul>
+                                <li data-en="After graduating from the training camp, outstanding students will be admitted as annual trainees" data-zh="优秀学员从训练营毕业后，择优录取为年度学员。">优秀学员从训练营毕业后，择优录取为年度学员。</li>
+                                <li data-en="Exclusive to Professor Lu's one-on-one career planning, rich computer and artificial intelligence courses, and participation in large-scale competitions and project practice at home and abroad" data-zh="专享陆教授一对一职业规划，丰富的计算机和人工智能课程，参加国内外大型比赛和项目实践。">专享陆教授一对一职业规划，丰富的计算机和人工智能课程，参加国内外大型比赛和项目实践。</li>
+                            </ul>
+                            <a href="#" class="cta-button" data-en="Subscribe Yearly" data-zh="面试加入">面试加入</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-container">
+                <!-- SVG content -->
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28C228.36,68.92,294.33,40.98,364.8,36.79C438.64,32.43,512.34,53.67,583,72.05C652.27,90.05,721.3,96.93,792.4,85.13C828.55,79.13,862.25,67.29,896.85,55.79C989.49,25,1113,-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05C99.41,111.27,165,111,224.58,91.58C255.73,81.43,284.67,65.51,314.25,51.78C355.17,32.78,398.98,5.78,445.08,2.11C481.34,-0.74,515.98,11.53,543.68,33.67C575.45,59.06,606,95.67,647.31,106.67C687.75,117.46,728.66,100,766.44,82.41C802.6,65.91,838.3,43.75,879.07,39.7C938.8,33.85,992.35,62.58,1047.97,78.54C1078.17,87.2,1107,84.71,1135.09,70.04C1157.52,59.15,1183.09,43.11,1195.74,20.8V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57C518.83,34.93,560.06,22.45,603.44,16.11C662.44,7.48,715.92,28.35,769,51.51C820.37,77.22,878.44,95.24,943.64,90C1030.17,83,1116.1,44.29,1192.44,5.19V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-en="Quick Links" data-zh="快速链接">快速链接</h4>
+                <ul>
+                    <li><a href="#home" data-en="Home" data-zh="首页">首页</a></li>
+                    <li><a href="#about" data-en="About" data-zh="关于我们">关于我们</a></li>
+                    <li><a href="#Our Team" data-en="Our Team" data-zh="我们的团队">我们的团队</a></li>
+                    <li><a href="#AI training camp" data-en="AI training camp" data-zh="AI训练营">AI训练营</a></li>
+                    <li><a href="#Clubs" data-en="Clubs" data-zh="俱乐部">俱乐部</a></li>
+                    <li><a href="#Contact Us" data-en="Contact Us" data-zh="联系我们">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Contact Us" data-zh="联系我们">联系我们</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Discord">💬</a>
+                    <a href="#" aria-label="GitHub">🐙</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="YouTube">🎥</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-en="© 2024 Lulab, All rights reserved." data-zh="© 2024 陆向谦实验室,保留所有权利。">© 2024 陆向谦实验室,保留所有权利。</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Reference -->
+    <script src="js/script.js"></script>
+</body>
+</html>
