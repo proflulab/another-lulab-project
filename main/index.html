@@ -77,32 +77,71 @@
 
             <button id="languageToggle" data-en="中文" data-zh="English">English</button>
             <!-- Hamburger Menu Icon for Mobile -->
-            <div class="hamburger-menu">
+            <div class="hamburger-menu" aria-label="Main Menu" aria-expanded="false">
                 <span>☰</span> <!-- You can change this to a hamburger icon if needed -->
             </div>
-
             <!-- The expanded menu for mobile view -->
             <div class="menu-expanded">
-                <a href="#home" data-en="Home" data-zh="首页">首页</a>
-                <a href="#about" data-en="Mission,Vision,Goal" data-zh="使命、愿景、培养目标" class="submenu">使命、愿景、培养目标</a>
-                <a href="#Philosophy" data-en="Educational Philosophy" data-zh="教育理念" class="submenu">教育理念</a>
-                <a href="#team" data-en="Our Team" data-zh="我们的团队">我们的团队</a>
-                <a href="#ai-club" data-en="AI training camp" data-zh="AI训练营">AI训练营</a>
-                <a href="https://another-lulab-project-introduction.vercel.app/" data-en="Introduction" data-zh="训练营介绍" class="submenu">训练营介绍</a>
-                <a href="https://another-lulab-project-schedule.vercel.app/" data-en="Schedule" data-zh="日程安排" class="submenu">日程安排</a>
-                <a href="#technologies" data-en="Related technologies" data-zh="相关技术" class="submenu">相关技术</a>
-                <a href="#Achievements" data-en="Achievements" data-zh="成果展示" class="submenu">成果展示</a>
-                <a href="#clubs" data-en="Clubs" data-zh="俱乐部">俱乐部</a>
-                <a href="https://another-lulab-project-ai-basic.vercel.app/" data-en="AI Basics Club" data-zh="AI 基础俱乐部" class="submenu">AI 基础俱乐部</a>
-                <a href="#coding-club" data-en="AI Advanced Club" data-zh="AI 工业级俱乐部" class="submenu">AI 工业级俱乐部</a>
-                <a href="#roblox-club" data-en="English Edification Metaverse Club" data-zh="英文熏陶元宇宙俱乐部" class="submenu">英文熏陶元宇宙俱乐部</a>
-                <a href="#roblox-club" data-en="Lua Basic Programming & Metaverse Club" data-zh="Lua基础编程&元宇宙俱乐部" class="submenu">Lua基础编程&元宇宙俱乐部</a>
-                <a href="#roblox-club" data-en="Digital Marketing Club" data-zh="数字营销俱乐部" class="submenu">数字营销俱乐部</a>
-                <a href="#roblox-club" data-en="Leadership Club" data-zh="领导力俱乐部" class="submenu">领导力俱乐部</a>
-                <a href="#links" data-en="Contact Us" data-zh="联系我们">联系我们</a>
+                <ul class="mobile-menu">
+                    <!-- Home -->
+                    <li>
+                        <a href="#home" data-en="Home" data-zh="首页">首页</a>
+                    </li>
+
+                    <!-- About Us -->
+                    <li>
+                        <div class="mobile-dropdown">
+                            <a href="#about" data-en="About Us" data-zh="关于我们">关于我们</a>
+                            <span class="mobile-dropdown-toggle">+</span>
+                        </div>
+                        <ul class="mobile-submenu">
+                            <li><a href="#about" data-en="Mission, Vision, Goal" data-zh="使命、愿景、培养目标">使命、愿景、培养目标</a></li>
+                            <li><a href="#Philosophy" data-en="Educational Philosophy" data-zh="教育理念">教育理念</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Our Team -->
+                    <li>
+                        <a href="#team" data-en="Our Team" data-zh="我们的团队">我们的团队</a>
+                    </li>
+
+                    <!-- AI Training Camp -->
+                    <li>
+                        <div class="mobile-dropdown">
+                            <a href="#ai-club" data-en="AI Training Camp" data-zh="AI训练营">AI训练营</a>
+                            <span class="mobile-dropdown-toggle">+</span>
+                        </div>
+                        <ul class="mobile-submenu">
+                            <li><a href="https://another-lulab-project-introduction.vercel.app/" data-en="Introduction" data-zh="训练营介绍">训练营介绍</a></li>
+                            <li><a href="https://another-lulab-project-schedule.vercel.app/" data-en="Schedule" data-zh="日程安排">日程安排</a></li>
+                            <li><a href="#technologies" data-en="Related Technologies" data-zh="相关技术">相关技术</a></li>
+                            <li><a href="#Achievements" data-en="Achievements" data-zh="成果展示">成果展示</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Clubs -->
+                    <li>
+                        <div class="mobile-dropdown">
+                            <a href="#clubs" data-en="Clubs" data-zh="俱乐部">俱乐部</a>
+                            <span class="mobile-dropdown-toggle">+</span>
+                        </div>
+                        <ul class="mobile-submenu">
+                            <li><a href="https://another-lulab-project-ai-basic.vercel.app/" data-en="AI Basics Club" data-zh="AI 基础俱乐部">AI 基础俱乐部</a></li>
+                            <li><a href="#coding-club" data-en="AI Advanced Club" data-zh="AI 工业级俱乐部">AI 工业级俱乐部</a></li>
+                            <li><a href="#roblox-club" data-en="English Edification Metaverse Club" data-zh="英文熏陶元宇宙俱乐部">英文熏陶元宇宙俱乐部</a></li>
+                            <li><a href="#roblox-club" data-en="Lua Basic Programming & Metaverse Club" data-zh="Lua基础编程&元宇宙俱乐部">Lua基础编程&元宇宙俱乐部</a></li>
+                            <li><a href="#roblox-club" data-en="Digital Marketing Club" data-zh="数字营销俱乐部">数字营销俱乐部</a></li>
+                            <li><a href="#roblox-club" data-en="Leadership Club" data-zh="领导力俱乐部">领导力俱乐部</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Contact Us -->
+                    <li>
+                        <a href="#links" data-en="Contact Us" data-zh="联系我们">联系我们</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </header>
+
 
     <!-- Minor Banner (Dropdown Style) -->
     <div class="minor-banner">
