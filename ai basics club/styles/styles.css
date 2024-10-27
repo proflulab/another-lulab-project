@@ -1,0 +1,361 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variables */
+:root {
+    --primary-blue: #0066cc;
+    --secondary-blue: #4da6ff;
+    --light-blue: #b3d9ff;
+    --dark-blue: #003366;
+    --accent-blue: #00ccff;
+    --text-color: #001f3f;
+    --background-color: #ffffff;
+    --footer-bg: #001f3f;
+    --gray-100: #f8f9fa;
+}
+
+/* Reset and Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(45deg, var(--primary-blue), var(--secondary-blue));
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo span {
+    font-weight: bold;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent-blue);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Language Toggle Button */
+#languageToggle {
+    background-color: white;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#languageToggle:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* Main Content Styles */
+main {
+    padding-top: 100px;
+}
+
+.wave-section {
+    position: relative;
+    padding: 5rem 0;
+    background-color: var(--gray-100);
+    overflow: hidden;
+}
+
+.content-wrapper {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.lang-fade {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Picture and Text Section */
+.picture-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;  /* Center the section */
+    max-width: 1200px;  /* Restrict max width */
+    background-color: white;  /* Background for card-style */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Light shadow for a card effect */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Image container */
+.image-container {
+    flex: 1;
+    max-width: 50%;  /* Make the image container take 50% of the width */
+}
+
+/* Style for the image */
+.club-image {
+    width: 100%;  /* Ensure the image takes up the full width of its container */
+    height: auto;
+    display: block;
+}
+
+/* Text container */
+.text-container {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Heading styles */
+.text-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Paragraph styles */
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Call-to-action button */
+.text-container .cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.text-container .cta-button:hover {
+    background-color: #004c99;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* Media Queries */
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Adjust header padding */
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    /* Resize logo and language toggle button */
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    #languageToggle {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Stack layout for picture-text section */
+    .picture-text-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 100%;
+    }
+
+    /* Text and button adjustments */
+    .text-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .text-container .cta-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Tablets (min-width: 481px) and (max-width: 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    /* Header adjustments */
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    /* Adjust logo and navigation link spacing */
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .main-nav a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Picture-text section stacking */
+    .picture-text-section {
+        flex-direction: column;
+    }
+
+    .text-container h3 {
+        font-size: 1.7rem;
+    }
+
+    .text-container p {
+        font-size: 0.95rem;
+    }
+
+    .text-container .cta-button {
+        padding: 0.6rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablets (min-width: 768px) */
+@media (min-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 1rem 2rem;
+    }
+
+    /* Flexbox for picture-text section */
+    .picture-text-section {
+        flex-direction: row;
+    }
+
+    /* Language toggle button scaling */
+    #languageToggle {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Main content padding */
+    main {
+        padding-top: 80px;
+    }
+
+    /* Text scaling */
+    .text-container h3 {
+        font-size: 1.8rem;
+    }
+    .text-container p {
+        font-size: 1rem;
+    }
+    .text-container .cta-button {
+        padding: 0.7rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Desktops (min-width: 992px) */
+@media (min-width: 992px) {
+    /* Picture and text section max-width adjustments */
+    .picture-text-section {
+        max-width: 1000px;
+        margin: 3rem auto;
+    }
+
+    /* Text scaling */
+    .text-container h3 {
+        font-size: 2rem;
+    }
+    .text-container p {
+        font-size: 1.1rem;
+    }
+    .text-container .cta-button {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Desktops (min-width: 1200px) */
+@media (min-width: 1200px) {
+    /* Header alignment */
+    .header-content {
+        padding: 0 2.5rem;
+    }
+
+    /* Max width for content-wrapper */
+    .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Text adjustments for picture-text section */
+    .text-container h3 {
+        font-size: 2.2rem;
+    }
+    .text-container p {
+        font-size: 1.2rem;
+    }
+}
+
