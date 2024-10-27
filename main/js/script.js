@@ -11,62 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroBackground = document.querySelector('.hero-background');
     let imageTimeout;
 
-    // Helper function to remove all event listeners from an element
-    function removeAllEventListeners(element) {
-        const newElement = element.cloneNode(true);
-        element.parentNode.replaceChild(newElement, element);
-        return newElement;
-    }
-
     function showHeroItem(index) {
         if (imageTimeout) clearTimeout(imageTimeout);
         heroBackground.innerHTML = '';
         const item = heroItems[index];
-        const videoButton = document.querySelector('.video-button');
-
         if (item.type === 'image') {
             heroBackground.style.backgroundImage = `url(${item.src})`;
             heroBackground.style.backgroundSize = 'cover';
             heroBackground.style.backgroundPosition = 'center';
             imageTimeout = setTimeout(nextHeroItem, 5000);
-
-            // Hide the video button when displaying an image
-            if (videoButton) {
-                videoButton.style.display = 'none';
-            }
         } else if (item.type === 'video') {
             const video = document.createElement('video');
             video.src = item.src;
-            video.autoplay = false;
+            video.autoplay = false;  // Video will be paused initially
             video.loop = false;
-            video.muted = false;
-            video.volume = 1.0;
+            video.muted = false;     // Ensure the video is not muted
+            video.volume = 1.0;      // Set the volume to 100% (1.0)
             video.style.width = '100%';
             video.style.height = '100%';
             video.style.objectFit = 'cover';
             video.style.objectPosition = 'center';
             video.addEventListener('ended', nextHeroItem);
             heroBackground.appendChild(video);
-
-            // Remove previous event listeners from the video button
-            if (videoButton) {
-                const newVideoButton = removeAllEventListeners(videoButton);
-                newVideoButton.style.display = 'block';
-                newVideoButton.textContent = '►'; // Reset the button text
-                newVideoButton.onclick = function () {
-                    if (video.paused) {
-                        video.play();
-                        newVideoButton.textContent = '❚❚';
-                    } else {
-                        video.pause();
-                        newVideoButton.textContent = '►';
-                    }
-                };
-            }
         }
     }
-
-    
     
 
     function nextHeroItem() {
@@ -75,6 +43,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     showHeroItem(heroIndex);
+    
+    // Select the video and the button
+    const videoButton = document.querySelector('.video-button');
+    const video = document.querySelector('.hero-background video');
+
+    // Add a click event listener to the button
+    if (videoButton && video) {
+        videoButton.addEventListener('click', function () {
+            if (video.paused) {
+                video.play();
+                videoButton.textContent = '❚❚';
+            } else {
+                video.pause();
+                videoButton.textContent = '►';
+            }
+        });
+    }
 
     // Language Toggle Functionality
     const languageToggle = document.getElementById('languageToggle');
@@ -229,12 +214,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Hamburger Menu Elements
+    // Enhanced Hamburger Menu Functionality
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const menuExpanded = document.querySelector('.menu-expanded');
     const mainNav = document.querySelector('.main-nav');
-    
-    // Toggle the hamburger menu for mobile
+
     if (hamburgerMenu && menuExpanded) {
         // Toggle menu on hamburger click
         hamburgerMenu.addEventListener('click', function(e) {
@@ -253,9 +237,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (mainNav) mainNav.style.display = '';
             }
         });
-    
-        // Handle menu item clicks (excluding submenu toggles)
-        menuExpanded.querySelectorAll('.mobile-menu > li > a').forEach(link => {
+
+        // Handle menu item clicks
+        menuExpanded.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburgerMenu.classList.remove('active');
                 menuExpanded.classList.remove('active');
@@ -267,8 +251,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
-            if (!hamburgerMenu.contains(e.target) &&
-                !menuExpanded.contains(e.target) &&
+            if (!hamburgerMenu.contains(e.target) && 
+                !menuExpanded.contains(e.target) && 
                 menuExpanded.classList.contains('active')) {
                 hamburgerMenu.classList.remove('active');
                 menuExpanded.classList.remove('active');
@@ -283,44 +267,13 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
         });
     }
-    
-    // Mobile Submenu Toggle Functionality
-    const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-    
-    mobileDropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent event bubbling to menuExpanded
-            const submenu = this.parentElement.nextElementSibling;
-            if (submenu && submenu.classList.contains('mobile-submenu')) {
-                submenu.classList.toggle('show');
-                // Toggle the plus/minus symbol
-                if (submenu.classList.contains('show')) {
-                    this.textContent = '−'; // Change to minus symbol
-                } else {
-                    this.textContent = '+';
-                }
-            }
-        });
-    });
-    
-    // Prevent closing menu when clicking on submenu links
-    const submenuLinks = document.querySelectorAll('.mobile-submenu a');
-    submenuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.stopPropagation();
-            // Close the menu after clicking a submenu link
-            hamburgerMenu.classList.remove('active');
-            menuExpanded.classList.remove('active');
-            menuExpanded.style.display = 'none';
-            document.body.style.overflow = '';
-            if (mainNav) mainNav.style.display = '';
-        });
-    });
-    
-        // Initial calls
-        adjustFontSize();
-    
-        // Window event listeners
-        window.addEventListener('resize', adjustFontSize);
-    });
-    
+
+    // Initial calls
+    adjustFontSize();
+
+    // Window event listeners
+    window.addEventListener('resize', adjustFontSize);
+    window.addEventListener('resize', detectOrientation);
+    detectOrientation(); // Initial orientation check
+});
+
